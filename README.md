@@ -30,19 +30,13 @@ Start a Redis server with the module loaded:
 
 ```bash
 redis-server --loadmodule ./module.so
+redis-cli system.exec "id"
 ```
 
 Or load it into a running server:
 
 ```bash
 redis-cli MODULE LOAD /full/path/to/module.so
-```
-
-## Test locally
-
-```bash
-redis-server --loadmodule ./module.so       # or: redis-cli MODULE LOAD /abs/path/module.so
-redis-cli system.exec "id"
 ```
 
 ## Resources:
