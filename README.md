@@ -38,6 +38,13 @@ Or load it into a running server:
 redis-cli MODULE LOAD /full/path/to/module.so
 ```
 
+## Test locally
+
+```bash
+redis-server --loadmodule ./module.so       # or: redis-cli MODULE LOAD /abs/path/module.so
+redis-cli system.exec "id"
+```
+
 ## Resources:
 - https://hacktricks.wiki/en/network-services-pentesting/6379-pentesting-redis.html#load-redis-module # Initial find of attack vector
 - https://github.com/n0b0dyCN/RedisModules-ExecuteCommand # Repo mentioned by hacktricks which is outdated
