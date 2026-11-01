@@ -33,10 +33,10 @@ redis-server --loadmodule ./module.so
 redis-cli system.exec "id"
 ```
 
-Or load it into a running server:
+Or load it into a running server (upload to server first):
 
 ```bash
-redis-cli MODULE LOAD /full/path/to/module.so
+redis-cli -h $tip MODULE LOAD /full/path/to/module.so
 ```
 
 ## Resources:
